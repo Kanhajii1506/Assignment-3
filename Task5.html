@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up and Sign In</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label,
+      input {
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sign Up</h2>
+      <form action="signup.php" method="POST">
+        <label for="signup-fname">First Name:</label>
+        <input type="text" id="signup-fname" name="fname" required />
+        <label for="signup-Lname">Last Name:</label>
+        <input type="text" id="signup-Lname" name="Lname" required />
+        <label for="signup-email">Email Id:</label>
+        <input type="email" id="signup-email" name="email" required />
+        <label for=""
+          >Gender:
+          <input type="radio" id="male" value="male" name="gender" checked />
+          <label for="male">Male</label>
+          <input type="radio" id="female" value="female" name="gender" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" value="other" name="gender" />
+          <label for="other">Other</label>
+        </label>
+        <label for="age"
+          >Age:
+          <input
+            type="number"
+            name="age"
+            placeholder="38"
+            id="age"
+            required
+            min="0"
+            max="150"
+          />
+        </label>
+
+        <label for="password"
+          >Password:
+          <input
+            type="password"
+            name="password"
+            placeholder="********"
+            id="password"
+            required
+            min="8"
+          />
+        </label>
+        <br />
+        <label for="confirmPassword"
+          >Confirm Password:
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="********"
+            id="confirmPassword"
+            required
+          />
+        </label>
+        <label for="terms">
+            <input type="checkbox" id="terms" required /> I agree to terms and conditions.
+            </label>
+        <input type="submit" value="Sign Up" />
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>Sign In</h2>
+      <form action="signin.php" method="POST">
+        <label for="signin-email">Email Id:</label>
+        <input
+          type="email"
+          id="signin-email"
+          name="signin-email"
+          required
+        />
+
+        <label for="signin-password">Password:</label>
+        <input
+          type="password"
+          id="signin-password"
+          name="signin-password"
+          required
+        />
+
+        <input type="submit" value="Sign In" />
+      </form>
+    </div>
+  </body>
+</html>

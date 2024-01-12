@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Gallery</title>
+    <style>
+        /* Style the gallery container */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+            gap: 10px;
+        }
+
+        /* Style the gallery items */
+        .gallery-item {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item2
+        {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            border: 2px solid black;
+        }
+
+        .gallery-item3
+        {
+            width: 400px;
+            height: 400px;
+            display: flex;
+            border: 2px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+        <img src="./img1.png" alt="Image 1">
+        </div>                                                  
+        <div class="gallery-item2">
+            <img src="./img2.png" alt="Image 2">
+        </div>
+        <div class="gallery-item3">
+            <img src="./img3.png" alt="Image 3">
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+</body>
+</html>
